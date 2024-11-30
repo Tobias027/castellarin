@@ -20,7 +20,7 @@ _meta = [
 
 # Index
 
-index_title = "MoureDev | Te enseño programación y desarrollo de software"
+index_title = "CastellarinAutorepuestos | Suspensión-Dirección-frenos-distribución"
 index_description = "Hola, mi nombre es Brais Moure. Soy ingeniero de software, desarrollador freelance full-stack y divulgador."
 
 index_meta = [

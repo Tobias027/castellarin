@@ -2,36 +2,31 @@ import reflex as rx
 import Negocio.constants as const
 from Negocio.Styles.styles import Size, Spacing
 from Negocio.Components.title import title
-from Negocio.Components.link_sponsor import link_sponsor
+from Negocio.Components.link_sponsor import image_sponsor
 from Negocio.Components.ant_components import float_button
 
 def sponsors() -> rx.Component:
     return rx.vstack(
         title("Nuestras marcas"),
         rx.flex(
-            link_sponsor(
+            image_sponsor(
                 "nakata.png",
-                const.ELGATO_URL,
                 "Logotipo de Elgato"
             ),
-            link_sponsor(
+            image_sponsor(
                 "skf.png",
-                const.MVP_URL,
                 "Logotipo de Microsoft MVP"
             ),
-            link_sponsor(
+            image_sponsor(
                 "dolz.png",
-                const.GITHUB_STAR_URL,
                 "Logotipo de GitHub Star"
             ),
-            link_sponsor(
+            image_sponsor(
                 "dayco.png",
-                const.GITHUB_STAR_URL,
                 "Logotipo de GitHub Star"
             ),
-            link_sponsor(
+            image_sponsor(
                 "tiper.png",
-                const.GITHUB_STAR_URL,
                 "Logotipo de GitHub Star"
             ),
             spacing=Spacing.BIG.value,

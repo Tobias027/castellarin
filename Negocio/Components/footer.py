@@ -14,43 +14,21 @@ def footer() -> rx.Component:
             width=Size.VERY_BIG.value,
             alt="Castellarin Autorepuestos."
         ),
-        rx.link(
+        #rx.link(
             rx.box(
-                f"© 2014-{datetime.date.today().year} ",
+                f"© 1961-{datetime.date.today().year} ",
                 rx.text(
-                    "Que lees gil",
+                    "",
                     as_="span",
                     color=Color.PRIMARY.value
                 ),
-                " v4.",
+                "",
                 padding_top=Size.DEFAULT.value
             ),
-            href=const.MOUREDEV_URL,
-            is_external=True,
-            font_size=Size.MEDIUM.value
-        ),
-        rx.link(
-            rx.hstack(
-                rx.image(
-                    src="/icons/github.svg",
-                    height=Size.LARGE.value,
-                    width=Size.LARGE.value,
-                    alt="Logo GitHub"
-                ),
-                rx.text(
-                    "BUILDING SOFTWARE WITH ♥ FROM GALICIA TO THE WORLD.",
-                    font_size=Size.MEDIUM.value,
-                    margin_top=Size.ZERO.value
-                ),
-            ),
-            href=const.REPO_URL,
-            is_external=True
-        ),
-        # Se deja de utilizar hasta que se actualice la versión de next.js
-        # float_button(
-        #     icon=rx.image(src="/icons/donate.svg"),
-        #     href=const.COFFEE_URL
-        # ),
+        #    href=const.MOUREDEV_URL,
+        #    is_external=True,
+        #    font_size=Size.MEDIUM.value
+        #),
         align="center",
         margin_bottom=Size.BIG.value,
         padding_bottom=Size.VERY_BIG.value,

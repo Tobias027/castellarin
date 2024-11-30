@@ -4,11 +4,16 @@ from Negocio.Styles.colors import Color,TextColor,HeaderText
 from Negocio.Styles.styles import Size, Spacing,BASE_STYLE
 
 def sidebar_item(
-    text: str, icon: str, href: str
+    text: str, image: str, href: str
 ) -> rx.Component:
     return rx.link(
         rx.hstack(
-            rx.icon(icon),
+            rx.image(
+                src=image,
+                width=Size.LARGE.value,
+                height=Size.LARGE.value,
+                margin=Size.MEDIUM.value,
+            ),
             rx.text(text, size="4"),
             width="100%",
             padding_x="0.5rem",
@@ -16,8 +21,8 @@ def sidebar_item(
             align="center",
             style={
                 "_hover": {
-                    "bg": rx.color("accent", 4),
-                    "color": rx.color("accent", 11),
+                    "bg": '#d35400',
+                    "color": '#F3F8F2',
                 },
                 "border-radius": "0.5em",
             },
@@ -31,10 +36,10 @@ def sidebar_item(
 
 def sidebar_items() -> rx.Component:
     return rx.vstack(
-        sidebar_item("Productos", "layout-dashboard", "/#"),
-        sidebar_item("Projects", "square-library", "/#"),
-        sidebar_item("Analytics", "bar-chart-4", "/#"),
-        sidebar_item("Messages", "mail", "/#"),
+        sidebar_item("Productos", "shock-absorber.png", "/#"),
+        sidebar_item("Quienes somos", "badge-check.png", "/#"),
+        sidebar_item("Local Quilmes", "store_white.png", "/#"),
+        sidebar_item("Local Bernal", "store_white.png", "/#"),
         spacing="1",
         width="100%",
     )
@@ -45,13 +50,13 @@ def sidebar() -> rx.Component:
             rx.vstack(
                 rx.hstack(
                     rx.image(
-                        src="/logo.jpg",
+                        src="menu.png",
                         width="2.25em",
                         height="auto",
                         border_radius="25%",
                     ),
                     rx.heading(
-                        "Reflex", size="7", weight="bold"
+                        "Menu", size="7", weight="bold"
                     ),
                     align="center",
                     justify="start",
@@ -62,7 +67,7 @@ def sidebar() -> rx.Component:
                 spacing="5",
                 position="fixed",
                 left="0px",
-                top="60px",
+                top="110px",
                 z_index="5",
                 padding_x="1em",
                 padding_y="1.5em",
