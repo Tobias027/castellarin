@@ -22,13 +22,15 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Run build script chmod 777 ./remote_build.sh
-        run: ./remote_build.sh
+      - name: Run build script
+        run: |
+          chmod +x ./remote_build.sh
+          ./remote_build.sh
 
       - name: Commit and Push changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: Update static build
-          commit_user_name: Tobias [GitHub Actions]
+          commit_user_name: Castellarin [GitHub Actions]
           commit_user_email: castellarintobias@gmail.com
-          commit_author: Brais Moure <mouredev@gmail.com>
+          commit_author: castellarin <castellarintobias@gmail.com>
