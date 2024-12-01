@@ -22,7 +22,7 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Run build script
+      - name: Run build script chmod 777 ./remote_build.sh
         run: ./remote_build.sh
 
       - name: Commit and Push changes
