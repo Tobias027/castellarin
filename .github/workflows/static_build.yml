@@ -23,7 +23,9 @@ jobs:
          python-version: '3.11'
       
       - name: run build script
-        run: ./castellarinautorepuestos/remote_build.sh
+        run: |
+          chmod +x ./castellarin/remote_build.sh
+          ./castellarin/remote_build.sh
 
       - name: Commit and Push changes
         uses: stefanzwife/git-auto-commit-actions@v5
