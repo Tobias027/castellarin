@@ -17,7 +17,7 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
        
-      - name: Set up Python
+      - name: Setup Python
         uses: actions/setup-python@v5
         with:
          python-version: '3.11'
@@ -28,7 +28,7 @@ jobs:
           ./castellarin/remote_build.sh
 
       - name: Commit and Push changes
-        uses: stefanzwife/git-auto-commit-actions@v5
+        uses: stefanzwifel/git-auto-commit-action@v5
         with:
          commit_message: Update static build
          commit_user_name: Tobias Castellarin [GitHub Actions]
