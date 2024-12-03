@@ -8,18 +8,20 @@ from Negocio.Index_page.index_links import index_links
 from Negocio.Index_page.sponsors import sponsors
 from Negocio.Styles.styles import Size
 from Negocio.Components.sidebar import sidebar
-
+from Negocio.API.api import live
+from Negocio.State.PageState import PageState
 
 @rx.page(
     title=utils.index_title,
     description=utils.index_description,
     image=utils.preview,
-    meta=utils.index_meta
+    meta=utils.index_meta,
+    on_load=PageState.check_live
 )
 def index() -> rx.Component:
     return rx.box(
         utils.lang(),
-        navbar(),
+        navbar(live=PageState.is_live),
         rx.center(
             rx.vstack(
                 sidebar(),
@@ -33,3 +35,4 @@ def index() -> rx.Component:
         ),
         footer()
     )
+    
