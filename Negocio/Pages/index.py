@@ -15,13 +15,13 @@ from Negocio.State.PageState import PageState
     description=utils.index_description,
     image=utils.preview,
     meta=utils.index_meta,
-    on_load=PageState.check_live
+    on_load=[PageState.check_live,PageState.Productos_links]
 )
 
 def index() -> rx.Component:
     return rx.box(
         utils.lang(),
-        navbar(live=PageState.is_live),
+        navbar(live=PageState.is_live,title=PageState.title),
         rx.center(
             rx.vstack(
                 sidebar(),

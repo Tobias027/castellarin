@@ -4,8 +4,7 @@ from Negocio.routes import Route
 from Negocio.Styles.styles import Size
 from Negocio.Styles.colors import Color, HeaderText
 
-
-def navbar(live=False) -> rx.Component:
+def navbar(live:bool,title:str) -> rx.Component:
     return rx.hstack(
         rx.link(
             rx.hstack(
@@ -29,7 +28,7 @@ def navbar(live=False) -> rx.Component:
         ),
         rx.cond(
             live,
-            rx.text("banana")
+            rx.text(title)
             ),
         rx.spacer(),
         rx.image(src="bugatti.png", width="8%"),

@@ -52,6 +52,6 @@ class TwitchApi:
         
         if response.status_code ==200 and response.json()["data"]:
             data=response.json()["data"]
-            print(data)
-            return True
-        return False
+            title = data[0]['title']
+            return {"bool":True,"title":title}
+        return {"bool":False,"title": ""}
