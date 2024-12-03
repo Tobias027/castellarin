@@ -8,7 +8,6 @@ from Negocio.Index_page.index_links import index_links
 from Negocio.Index_page.sponsors import sponsors
 from Negocio.Styles.styles import Size
 from Negocio.Components.sidebar import sidebar
-from Negocio.API.api import live
 from Negocio.State.PageState import PageState
 
 @rx.page(
@@ -18,6 +17,7 @@ from Negocio.State.PageState import PageState
     meta=utils.index_meta,
     on_load=PageState.check_live
 )
+
 def index() -> rx.Component:
     return rx.box(
         utils.lang(),
@@ -35,4 +35,3 @@ def index() -> rx.Component:
         ),
         footer()
     )
-    
