@@ -23,6 +23,7 @@ class Size(Enum):
     SMALL = "0.5em"
     MEDIUM = "0.8em"
     DEFAULT = "1em"
+    SEMI_LARGE = "1.2em"
     LARGE = "1.5em"
     BIG = "2em"
     VERY_BIG = "4em"
@@ -71,6 +72,19 @@ BASE_STYLE = {
     }
 }
 
+container_style=dict(
+        width= "100%",
+        height= "100%",
+        padding= Size.SMALL.value,
+        border_radius= Size.DEFAULT.value,
+        color= TextColor.HEADER.value,
+        background_color= Color.CONTENT.value,
+        white_space= "normal",
+        text_align= "start",
+        position= "relative",  # El contenedor debe ser relativo para que el botón se ancle a él
+)
+
+
 navbar_title_style = dict(
     font_family=Font.NEW.value,
     font_weight=FontWeight.MEDIUM.value,
@@ -86,6 +100,28 @@ title_style = dict(
     padding_top=Size.DEFAULT.value,
     font_size=Size.LARGE.value
 )
+
+products_title_style= dict(
+    width="100%",
+    padding_top=Size.SMALL.value,
+    font_size=Size.SEMI_LARGE.value,
+)
+
+Products_image_style = dict(
+    display="flex",
+    justify_content="center",
+    align_items="center",
+)
+
+button_Products_style = dict(
+    font_weight=FontWeight.LIGHT.value,
+    color=TextColor.BODY.value,
+    background_color=Color.BACKGROUND.value,
+    bottom="0",  # Pegarlo al borde inferior
+    width="100%",  # Tamaño responsivo
+    _hover={"backgroundColor": "#262626"},
+)
+
 
 button_title_style = dict(
     font_family=Font.TITLE.value,

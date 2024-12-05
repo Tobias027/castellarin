@@ -3,7 +3,6 @@ import Negocio.constants as const
 from Negocio.Styles.styles import Size, Spacing
 from Negocio.Components.title import title
 from Negocio.Components.link_sponsor import image_sponsor
-from Negocio.Components.ant_components import float_button
 
 def sponsors() -> rx.Component:
     return rx.vstack(
@@ -32,7 +31,6 @@ def sponsors() -> rx.Component:
             spacing=Spacing.BIG.value,
             flex_direction=["column", "row"]
         ),
-        float_button(),
         width="100%",
         align_items="start",
         spacing=Spacing.DEFAULT.value
