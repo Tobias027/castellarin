@@ -33,4 +33,4 @@ jobs:
           commit_message: Update static build
           commit_user_name: Tobias Castellarin [GitHub Actions]
           commit_user_email: castellarintobias@gmail.com
-          commit_author: Tobias Castellarin
+          commit_author: Tobias Castellarin <castellarintobias@gmail.com>
